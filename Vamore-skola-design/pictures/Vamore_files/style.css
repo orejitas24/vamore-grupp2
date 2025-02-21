@@ -45,13 +45,11 @@ body {
 /* style text container "about us" side */
 .text-container {
     min-width: 300px;
-    max-width: 800px;
+    max-width: 500px;
 }
 .text-container h1 {
-    font-size: 17vw;
+    font-size: 200px;
     font-family: Caveat, cursive;
-    margin-bottom: 0px; /* Space between title and button */
-    margin-left: 18%
 }
 .text-container h2 {
     align-items: center;
@@ -60,19 +58,20 @@ body {
     font-family: Caveat;
 }
 .text-container p {
-    font-size: 1.2vw;
+    font-size: 1vw;
+    line-height: 1.6;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+    width: 478px;
 }
-.center-content {
+/*.center-content {
     position: absolute;
-    top: 50%; /* Move content down to the center */
-    left: 50%; /* Move content to the center horizontally */
-    transform: translate(-50%, -50%); /* Perfect centering */
-    text-align: center; /* Center text alignment */
-    z-index: 2;
-    width: 100%;
-    color: rgb(96, 21, 21);
-}
-.button {
+    bottom: 25%;
+    display: flex;
+    text-align: center;
+    width: 80%;
+}*/
+.button{
     display: flex;
     width: 300px;
     height: 50px;
@@ -80,15 +79,15 @@ body {
     font-size: 20px;
     display: inline-block;
     text-align: center;
-    align-items: center;
     border: none;
     border-radius: 12px;
-    background: rgb(0, 0, 0);
+    background: rgb(208, 30, 30);
     color: white;
     z-index: 1;
-    margin-top: 80px;
-    margin-left: 90px;
+    position: relative;
+    margin-top: 130px;
     text-decoration: none;
+    top: 200px;
 }
 .footer {
     position: absolute;
