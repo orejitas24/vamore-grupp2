@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamore</title> 
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+            font-family: Montserrat, sans-serif;
+            background-color: #390707;
+            color: #420000; 
+ background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.nav {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 20px 45px;
+    padding-top: 20px;
+    background: rgb(96, 21, 21);
+    justify-content: space-between;
+    
+}
+
+.nav a {
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    font-size: 16px;
+    margin-left: 40px;
+}
+
+.nav a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+.nav a:hover:before{
+    width: 100%;
+}
+        .menu {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        h1 {
+            font-family:Caveat;
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+            text-align: center;
+            margin: 0;
+            padding-top: 45px;
+            
+
+        }
+
+        menu, h2 {
+            font-family:Caveat;
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            text-align: center;
+            margin: 0;
+            padding-top: 20px;
+
+        }
+        .Menu-text{
+            font-size: 50px;
+            text-align: center;
+            margin: 0;
+            padding-top: 12px;
+        }
+        .menu-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            font-family:Montserrat ;
+            background: rgb(246, 242, 242);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            
+        }
+
+
+        .item {
+            padding: 20px;
+        }
+        .item h3 {
+            font-size: 1.2em;
+            margin: 0 0 5px 0;
+        }
+        .item p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <!-- Navigation -->
+    <div class="nav">
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">About us</a>
+            <a href="#">Book a table</a>
+        </div>
+    </div>
+        <h1>VAMORE</h1>
+        <h2 class="Menu-text">Meny</h2>
+
+        <h2>Appetizers</h2>
+        <div class="menu-section">
+            <div class="item">
+                <h3>Buffalo Wings</h3>
+                <p>Butter, hot sauce, garlic powder, onion powder, paprika. Comes with ranch dressing.</p>
+            </div>
+            <div class="item">
+                <h3>Pigs in a blanket</h3>
+                <p>Small sausages, puff pastry, mustard, ketchup.</p>
+            </div>
+            <div class="item">
+                <h3>Chicken tenders</h3>
+                <p>Chicken breast, flour, eggs, breadcrumbs, paprika.</p>
+            </div>
+            <div class="item">
+                <h3>Fried pickles</h3>
+                <p>Pickle slices, flour, buttermilk, breadcrumbs, garlic powder, paprika.</p>
+            </div>
+        </div>
+        
+        <h2>Main Dishes</h2>
+        <div class="menu-section">
+            <div class="item">
+                <h3>Mac'n'cheese</h3>
+                <p>Macaroni pasta, cheddar cheese, milk, butter.</p>
+            </div>
+            <div class="item">
+                <h3>Chicken Alfredo</h3>
+                <p>Pasta, grilled chicken, Alfredo sauce, parmesan.</p>
+            </div>
+            <div class="item">
+                <h3>Pigs in a blanket</h3>
+                <p>Pasta, grilled chicken, Alfredo sauce, parmesan.</p>
+            </div>
+            <div class="item">
+                <h3>Burgers</h3>
+                <p>Pasta, grilled chicken, Alfredo sauce, parmesan.</p>
+            </div>
+        </div>
+
+        <h2>Desserts</h2>
+        <div class="menu-section">
+            <div class="item">
+                <h3>Cheese cake</h3>
+                <p>Macaroni pasta, cheddar cheese, milk, butter.</p>
+            </div>
+            <div class="item">
+                <h3>Apple pie</h3>
+                <p>Pasta, grilled chicken, Alfredo sauce, parmesan.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
