@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {  
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+        }
+        
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color:  #390707;
+    }
+    
+.nav {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: rgb(96, 21, 21);
+    justify-content: space-between;
+    white-space:nowrap; 
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+
+    
+}
+
+.nav a {
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    font-size: 16px;
+    margin-left: 40px;
+}
+
+.nav a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+.nav a:hover:before{
+    width: 100%;
+}
+
+.logo{
+    font-family: Caveat;
+    color: white;
+    font-size: 45px;
+    font-weight: 800;
+    margin-left: 45px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    padding-top: 0;
+
+}
+
+.logo-link {
+    text-decoration: none; /* Tar bort understrykning */
+}
+
+.logo-link .logo {
+    cursor: pointer; /* Ändrar muspekaren till en hand vid hover */
+    transition: transform 0.2s ease-in-out;
+}
+
+.logo-link .logo:hover {
+    transform: scale(1.05); /* Liten förstoring vid hover */
+}
+        section {
+            width: 100%;
+            min-height: 100vh;  
+            background-color:  #390707;
+        }
+        
+        main {
+            width: 80%;
+            margin: auto;
+            padding: 100px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        article {
+            width: 55%;
+        }
+        
+        figure {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        figure img {
+            width: 100%;
+            height: auto;
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+        
+        .title {
+            text-align: center;
+            font-size: 40px;
+            font-family: Caveat;
+            color: rgb(255, 255, 255);
+        }
+        
+        article h3 {
+            margin-top: 20px;
+            color: rgb(255, 255, 255);
+            font-size: 21px;
+            font-family: Montserrat, sans-serif;
+        }
+        
+        article p {
+            margin-top: 10px;
+            font-family: Montserrat, sans-serif;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        
+        .welcome {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header class="nav">
+        <a href="main.html" class="logo-link">
+            <p class="logo">Vamore</p>
+        </a>
+    
+        <nav class="nav-links">
+            <a href="meny.html">Menu</a>
+            <a href="TEST-TABLE.html">Book a Table</a>
+            <a href="contact-us.html">Contact</a>
+            <a href="about_us_2.html">About us</a>
+        </nav>
+    </header>
+    <section>
+        <main>
+            <article>
+                <h1 class="title">About Us</h1>
+                <h3>VAMORE was founded with a simple yet powerful idea – to bring the heart and soul of American dining to Sweden.</h3>
+                <p>Inspired by the classic diners of the U.S., we combine bold flavors, generous portions, and a warm, inviting atmosphere.</p>
+                <p>Our menu is a tribute to American culinary traditions, featuring everything from juicy burgers and crispy fries to indulgent milkshakes and slow-cooked barbecue. Every dish is crafted with high-quality ingredients and a passion for authentic taste.</p>
+                <p>But VAMORE is more than just food—it’s an experience. Whether you're here for a quick bite, a cozy dinner with friends, or a special celebration, we strive to make every visit unforgettable.</p>
+                <p class="welcome">Welcome to VAMORE, where "America meets Sweden" and every meal tells a story.</p>
+            </article>
+            
+            <figure>
+                <img src="pictures/spencer-davis-1w5-s4Yw4IM-unsplash.jpg" alt="VAMORE Restaurant">
+            </figure>
+        </main>
+    </section>
+</body>
+</html>
