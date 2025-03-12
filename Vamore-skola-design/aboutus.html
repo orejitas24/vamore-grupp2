@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="aboutusStyle.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,41 +12,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vamore</title>
-    <style>
-
-        
-    </style>
+    
 </head>
 <body>
-    <!-- Navigation -->
-    <div class="nav">
-        <div class="nav-links">
-            <a href="#">Menu</a>
-            <a href="#">Delivery</a>
-            <a href="#">About us</a>
-            <a href="#">Learn more</a>
+    <style>
+.nav{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 20px 45px;
+    padding-top: 20px;
+    background: rgb(96, 21, 21);
+    justify-content: space-between;
+    font-family: Montserrat;
+
+}
+.nav a {
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    font-size: 16px;
+    margin-left: 40px;
+}
+.nav a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+.nav a:hover:before{
+    width: 100%;
+}
+.center-content {
+    position: absolute;
+    background: transparent;
+    top: 200px;
+    right: -930px;
+    width: 100%;
+    padding-top: 45px;  
+    padding-left: 146px;            
+
+}
+
+.title{
+    font-family: Montserrat;
+    color: black;
+}
+        
+    </style>
+
+  
+   <div class="Content">
+    <div class="Header"> 
+        <div class="nav">
+            <div class="nav-links">
+                <a href="#">Menu</a>
+                <a href="#">Delivery</a>
+                <a href="#">About us</a>
+                <a href="#">Learn more</a>
+            </div>
         </div>
+        
     </div>
-<div class="conteiner">  
-<!-- Huvudtext -->
-<div class="center-content">  
-    <div class="main-text">
-        <h1 class="name">Vamore</h1>
-        <p>Welcome to VAMORE – where American flavors meet Swedish charm. Ready for a taste adventure?</p>
-    </div>
-    <div class="button">
-        <a href="#" class="btn">Book a table</a>
-    </div>
- </div>
+
+    <div class="section">  
+        <div class="container">
+            <div class="title">
+                <h1>About us</h1>
+            
+            </div>
+        </div> 
 
 
-<div class="footer">
-    Monday - Sunday 16:00 - 22:00 | (919) 821-7117
-</div>
-</div>
-    
+    </div>
 
-   
+
+   </div>
 
 
 
