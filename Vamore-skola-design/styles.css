@@ -92,6 +92,7 @@ article {
 }
 
 figure {
+    margin-top: 100px;
     width: 40%;
     display: flex;
     justify-content: center;
