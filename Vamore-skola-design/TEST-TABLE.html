@@ -1,162 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book a table</title>
-    <style>
-.form-container {
-            margin-top: 5px;
-            background-color:rgb(96, 21, 21);
-            padding-left: 40px;
-            padding-right: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(20, 6, 6, 0.1);
-            max-width: 500px;
-            height: 100%;
-            width: 100%;
-            text-align: left;
-        }
-        label {
-            
-            font-size: 16px;
-            text-align: left;
-            color: #ffffff;
-        }
-        /* Input and textarea styling */
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 8px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        /* Submit button styling */
-        button {
-            background-color: rgb(208, 30, 30);
-            color: rgb(244, 238, 238);
-            padding: 12px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-        }
-        /* Button hover effekt - byter färg när do hovrar*/
-        button:hover {
-            background-color: #4a0a13;
-        }
-        /*Textarea styling */
-        textarea {
-            height: 100px;
-        }
-        /* Form alignment */
-        form {
-            width: 100%;
-            height: 100%;
-
-        }
-
-.center-content{
-text-align: center;    
-border: none;
-padding-top: 90px;
-margin-top: 10%;
-max-width: 100%;
-
-}
-.main-text {
-    background: transparent;
-    top: 200px;
-    width: 100%;
-    margin-left: -200px;
-}
-
-.table{
-    font-size: 30px; 
-    font-family: Montserrat, sans-serif;
-    font-weight: bold; 
-    color: white;
-    margin-top: 0px;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    text-align: center;
-}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a table</title>
+  
+  <!-- Externa CSS-resurser -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  
+  <style>
+    /* Exempel på inbäddade stilar */
+    .form-container {
+      margin-top: 75px;
+      padding-top: 5px;
+      background-color: rgb(96, 21, 21);
+      padding-left: 40px;
+      padding-right: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(20, 6, 6, 0.1);
+      max-width: 500px;
+      width: 100%;
+      text-align: left;
+    }
+    label {
+      font-size: 16px;
+      text-align: left;
+      color: #ffffff;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      background-color: rgb(208, 30, 30);
+      color: rgb(244, 238, 238);
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #4a0a13;
+    }
+    textarea {
+      height: 100px;
+    }
+    .center-content {
+      text-align: center;    
+      padding-top: 90px;
+      margin-top: 10%;
+      max-width: 100%;
+    }
+    .main-text {
+      background: transparent;
+      width: 100%;
+      margin-left: -200px;
+    }
+    .table {
+      font-size: 30px; 
+      font-family: Montserrat, sans-serif;
+      font-weight: bold; 
+      color: white;
+      text-align: center;
+    }
+    .nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 5px 30px;
+      background: rgb(96, 21, 21);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav a {
+      text-decoration: none;
+      font-weight: 500;
+      color: white;
+      font-size: 16px;
+      margin-left: 40px;
+    }
+    .logo {
+      font-family: Caveat;
+      font-size: 45px;
+      font-weight: 800;
+      margin-left: 45px;
+    }
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      right: 45px;
+      font-size: 14px;
+    }
+    /* Enkel styling för modal */
+    #confirmationModal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    #confirmationModal .modal-content {
+      background: white;
+      color: black;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    /* Meddelande för fel */
+    #formMessage {
+      color: yellow;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <header class="nav">
-        <a href="main.html" class="logo-link">
-            <p class="logo">Vamore</p>
-        </a>
-    
-        <nav class="nav-links">
-            <a href="meny.html">Menu</a>
-            <a href="TEST-TABLE.html">Book a Table</a>
-            <a href="contact-us.html">Contact</a>
-            <a href="about_us_2.html">About us</a>
-        </nav>
-    </header>
-<!-- Huvudtext -->
-<section class="center-content">  
+  <!-- Navigation -->
+  <header class="nav">
+    <a href="main.html" class="logo-link">
+      <p class="logo">Vamore</p>
+    </a>
+    <nav class="nav-links">
+      <a href="meny.html">Menu</a>
+      <a href="TEST-TABLE.html">Book a Table</a>
+      <a href="contact-us.html">Contact</a>
+      <a href="about_us_2.html">About us</a>
+    </nav>
+  </header>
+  
+  <!-- Huvudtext -->
+  <section class="center-content">  
     <article class="main-text">
-        <h1 class="name">Vamore</h1>
-        <p class="table">Book a table</p>
-    
+      <h1 class="name">Vamore</h1>
+      <p class="table">Book a table</p>
     </article>
-    
-</section>
-
-
-
-
-
-<div class="footer">
+  </section>
+  
+  <!-- Footer -->
+  <div class="footer">
     Monday - Sunday 16:00 - 22:00 | (919) 821-7117
-</div>
-</div>
-
-<section class="form-container">
-    <form action="/submit-booking" method="POST">
-        <label for="date">Select Date:</label>
-        <input type="date" id="date" name="date" required>
-
-        <label for="time">Select Time:</label>
-        <input type="time" id="time" name="time" min="16:00" max="22:00" required>
-
-        <label for="guests">Number of Guests:</label>
-        <input type="number" id="guests" name="guests" min="1" max="20" required>
-
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="special-requests">Special Requests:</label>
-        <textarea id="special-requests" name="special-requests"></textarea>
-
-        <button type="submit">Book a Table</button>
+  </div>
+  
+  <!-- Bokningsformulär -->
+  <section class="form-container">
+    <form id="bookingForm" action="/submit-booking" method="POST">
+      <!-- Här visas felmeddelanden -->
+      <div id="formMessage"></div>
+      
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" name="date">
+      
+      <label for="time">Select Time:</label>
+      <input type="time" id="time" name="time" min="16:00" max="22:00">
+      
+      <label for="guests">Number of Guests:</label>
+      <input type="number" id="guests" name="guests" min="1" max="20">
+      
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email">
+      
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name">
+      
+      <label for="special-requests">Special Requests:</label>
+      <textarea id="special-requests" name="special-requests"></textarea>
+      
+      <button type="submit">Book a Table</button>
     </form>
-</section>
-
-
-
-
+  </section>
+  
+  <!-- Bekräftelse-modal -->
+  <div id="confirmationModal">
+    <div class="modal-content">
+      <p>Tack för din bokning!</p>
+      <button id="closeModal">Stäng</button>
+    </div>
+  </div>
+  
+  <!-- Inkludera din egna JavaScript-fil -->
+  <script src="TEST-TABLE.js" defer></script>
+  <!-- Inkludera Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>
 </html>
